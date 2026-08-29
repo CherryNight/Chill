@@ -53,7 +53,7 @@
     name = "battle chain"
     desc = "A tempered steel chain balanced with a faceted piercing dart. Deceptively fast, it can ensnare distant foes and drag them into lethal range."
     icon_state = "witcher_chain"
-    icon = 'modular_twilight_axis/witcher_chain/witcher_chain.dmi'
+    icon = 'modular_twilight_axis/icons/roguetown/weapons/32.dmi'
     force = 25
     sharpness = IS_SHARP
     wlength = WLENGTH_GREAT
@@ -86,7 +86,7 @@
     name = "silver battle chain"
     desc = "A tempered silver chain balanced with a faceted piercing dart. Deceptively fast, it can ensnare distant foes and drag them into lethal range."
     icon_state = "silver_witcher_chain"
-    icon = 'modular_twilight_axis/witcher_chain/witcher_chain.dmi'
+    icon = 'modular_twilight_axis/icons/roguetown/weapons/32.dmi'
     force = 24
     sharpness = IS_SHARP
     wlength = WLENGTH_GREAT
@@ -145,11 +145,11 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/witcher
     name = "steel battle chain bracers"
-    desc = "A pair of steel vambraces, protecting the arms from blows-most-foul."
+    desc = "A pair of steel chain bracers, protecting the arms from blows-most-foul."
     body_parts_covered = ARMS
-    icon = 'modular_twilight_axis/witcher_chain/witcher_chain.dmi'
-    mob_overlay_icon = 'modular_twilight_axis/witcher_chain/witcher_chains_onmob.dmi'
-    sleeved = 'modular_twilight_axis/witcher_chain/witcher_chains_onmob.dmi'
+    icon = 'modular_twilight_axis/icons/roguetown/clothing/wrists.dmi'
+    mob_overlay_icon = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    sleeved = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
     icon_state = "witcherchainarm"
     item_state = "witcherchainarm"
     armor = ARMOR_PLATE
@@ -160,13 +160,13 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/witcher/silver
     name = "silver battle chain bracers"
-    desc = "A pair of silver vambraces, protecting the arms from blows-most-foul."
+    desc = "A pair of silver chain bracers, protecting the arms from blows-most-foul."
     body_parts_covered = ARMS
-    icon = 'modular_twilight_axis/witcher_chain/witcher_chain.dmi'
-    mob_overlay_icon = 'modular_twilight_axis/witcher_chain/witcher_chains_onmob.dmi'
-    sleeved = 'modular_twilight_axis/witcher_chain/witcher_chains_onmob.dmi'
-    icon_state = "silver_witcherchainarm"
-    item_state = "witcherchainarm"
+    icon = 'modular_twilight_axis/icons/roguetown/clothing/wrists.dmi'
+    mob_overlay_icon = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    sleeved = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    icon_state = "silverwitcherchainarm"
+    item_state = "silverwitcherchainarm"
     armor = ARMOR_PLATE
     anvilrepair = /datum/skill/craft/weaponsmithing
     smeltresult = /obj/item/ingot/silver
