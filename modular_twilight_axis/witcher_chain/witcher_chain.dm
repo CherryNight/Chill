@@ -201,6 +201,17 @@
         playsound(user, 'sound/misc/chains.ogg', 20, TRUE)
     . = ..()
 
+/datum/anvil_recipe/weapons/steel/witcher_chain
+	name = "Steel Battle Chain"
+	req_bar = /obj/item/ingot/steel
+	created_item = /obj/item/rogueweapon/whip/witcher_chain
+	display_category = ITEM_CAT_WEAPONS_FLAILS
+
+/datum/anvil_recipe/weapons/silver/witcher_chain
+	name = "Silver Battle Chain"
+	req_bar = /obj/item/ingot/silver
+	created_item = /obj/item/rogueweapon/whip/witcher_chain/silver
+	display_category = ITEM_CAT_WEAPONS_FLAILS
 //SPECIAL
 
 // --- Визуальные эффекты полета и натяжения ---
@@ -245,13 +256,13 @@
     respect_dir = FALSE
     cooldown = 18 SECONDS
     stamcost = 18
-    range = 7
+    range = 5
 
     var/hook_damage = 0
     var/final_damage = 0
     var/flight_delay = 1
     var/reel_delay = 1
-    var/max_range = 7
+    var/max_range = 5
     var/active_cast = FALSE
 
     var/mob/living/hooked_target
