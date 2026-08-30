@@ -119,6 +119,31 @@
         added_def = 0,\
     )
 
+/obj/item/rogueweapon/whip/witcher_chain/bronze
+    name = "bronze battle chain"
+    desc = "A crude bronze chain balanced with a piercing dart. Softer than steel, it holds an edge poorly and bends easily under strain."
+    icon_state = "bronze_witcher_chain"
+    icon = 'modular_twilight_axis/icons/roguetown/weapons/32.dmi'
+    force = 24
+    sharpness = IS_SHARP
+    wlength = WLENGTH_GREAT
+    w_class = WEIGHT_CLASS_NORMAL
+    slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT
+    associated_skill = /datum/skill/combat/whipsflails
+    sewrepair = FALSE
+    parrysound = list('sound/combat/parry/parrygen.ogg')
+    swingsound = CHAINWHOOSH
+    max_blade_int = 200
+    max_integrity = 200
+    throwforce = 10
+    wdefense = 5
+    minstr = 8
+    anvilrepair = /datum/skill/craft/weaponsmithing
+    smeltresult = /obj/item/ingot/bronze
+    grid_width = 32
+    grid_height = 64
+    transform_type = /obj/item/clothing/wrists/roguetown/bracers/witcher/bronze
+
 /obj/item/rogueweapon/whip/witcher_chain/attack(mob/living/target, mob/living/user)
     if(is_being_thrown_by_special)
         return FALSE
@@ -173,6 +198,21 @@
     is_silver = TRUE
     transform_type = /obj/item/rogueweapon/whip/witcher_chain/silver
 
+/obj/item/clothing/wrists/roguetown/bracers/witcher/bronze
+    name = "bronze battle chain bracers"
+    desc = "A pair of bronze chain bracers, protecting the arms from blows-most-foul. Softer than steel, they wear down faster."
+    body_parts_covered = ARMS
+    icon = 'modular_twilight_axis/icons/roguetown/clothing/wrists.dmi'
+    mob_overlay_icon = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    sleeved = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    icon_state = "bronzewitcherchainarm"
+    item_state = "bronzewitcherchainarm"
+    armor = ARMOR_BRONZE
+    anvilrepair = /datum/skill/craft/weaponsmithing
+    smeltresult = /obj/item/ingot/bronze
+    max_integrity = 200
+    transform_type = /obj/item/rogueweapon/whip/witcher_chain/bronze
+
 /obj/item/clothing/wrists/roguetown/bracers/witcher/ComponentInitialize()
     AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
 
@@ -218,6 +258,12 @@
 	name = "Silver Battle Chain"
 	req_bar = /obj/item/ingot/silver
 	created_item = /obj/item/rogueweapon/whip/witcher_chain/silver
+	display_category = ITEM_CAT_WEAPONS_FLAILS
+
+/datum/anvil_recipe/weapons/bronze/witcher_chain
+	name = "Bronze Battle Chain"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/rogueweapon/whip/witcher_chain/bronze
 	display_category = ITEM_CAT_WEAPONS_FLAILS
 //SPECIAL
 
