@@ -234,3 +234,8 @@
 	name = "Steel Axe"
 	cost = 40 // 1 Steel Ingot
 	contains = list(/obj/item/rogueweapon/stoneaxe/woodcut/steel)
+
+/datum/supply_pack/rogue/steel_weapons/witcher_chain //TA EDIT
+	name = "Battle chain"
+	cost = 40 // 1 Steel Ingot
+	contains = list(/obj/item/rogueweapon/whip/witcher_chain)
