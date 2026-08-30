@@ -271,21 +271,21 @@
 
 /obj/effect/temp_visual/chain_trail
     icon = 'icons/effects/effects.dmi'
-    icon_state = "chain_link"
+    icon_state = "srike"
     layer = BELOW_MOB_LAYER
     duration = 0.25 SECONDS
     alpha = 230
 
 /obj/effect/temp_visual/chain_impact
     icon = 'icons/effects/effects.dmi'
-    icon_state = "stab"
+    icon_state = "srike"
     layer = ABOVE_MOB_LAYER
     duration = 0.4 SECONDS
     alpha = 255
 
 /obj/effect/temp_visual/chain_finish_strike
     icon = 'icons/effects/effects.dmi'
-    icon_state = "slash"
+    icon_state = "cut"
     layer = ABOVE_MOB_LAYER
     duration = 0.4 SECONDS
     alpha = 255
