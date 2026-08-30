@@ -170,6 +170,7 @@
     armor = ARMOR_PLATE
     anvilrepair = /datum/skill/craft/weaponsmithing
     smeltresult = /obj/item/ingot/silver
+    is_silver = TRUE
     transform_type = /obj/item/rogueweapon/whip/witcher_chain/silver
 
 /obj/item/clothing/wrists/roguetown/bracers/witcher/ComponentInitialize()
@@ -179,25 +180,31 @@
     if(do_after(user,3 SECONDS, TRUE, src, allow_movement = TRUE))
         var/create_type = transform_type || /obj/item/rogueweapon/whip/witcher_chain
         var/obj/item/rogueweapon/whip/witcher_chain/W = new create_type(get_turf(src))
-        W.obj_integrity = obj_integrity
+        var/integrity_fraction = max_integrity ? (obj_integrity / max_integrity) : 1
+        W.obj_integrity = round(W.max_integrity * integrity_fraction)
         W.blade_int = stored_blade_int
-        if(user.is_holding(src))
-            user.dropItemToGround(src)
+        W.update_icon()
+        var/was_held = user.is_holding(src)
+        user.dropItemToGround(src)
+        qdel(src)
+        if(was_held)
             user.put_in_hands(W)
-            qdel(src)
-            playsound(user, 'sound/misc/chains.ogg', 20, TRUE)
+        playsound(user, 'sound/misc/chains.ogg', 20, TRUE)
     . = ..()
 
 /obj/item/rogueweapon/whip/witcher_chain/attack_right(mob/user)
     if(do_after(user,3 SECONDS, TRUE, src, allow_movement = TRUE))
         var/create_type = transform_type || /obj/item/clothing/wrists/roguetown/bracers/witcher
         var/obj/item/clothing/wrists/roguetown/bracers/witcher/B = new create_type(get_turf(src))
-        B.obj_integrity = obj_integrity
+        var/integrity_fraction = max_integrity ? (obj_integrity / max_integrity) : 1
+        B.obj_integrity = round(B.max_integrity * integrity_fraction)
         B.stored_blade_int = blade_int
-        if(user.is_holding(src))
-            user.dropItemToGround(src)
-            user.put_in_hands(B)
+        B.update_icon()
+        var/was_held = user.is_holding(src)
+        user.dropItemToGround(src)
         qdel(src)
+        if(was_held)
+            user.put_in_hands(B)
         playsound(user, 'sound/misc/chains.ogg', 20, TRUE)
     . = ..()
 
