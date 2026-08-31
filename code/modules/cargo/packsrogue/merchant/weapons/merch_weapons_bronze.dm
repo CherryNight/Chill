@@ -98,5 +98,5 @@
 
 /datum/supply_pack/rogue/bronze_weapons/chain // TA EDIT
 	name = "Bronze battle chain"
-	cost = 30 // 1 Bronze Ingot
+	cost = 35 // 1 Bronze Ingot
 	contains = list(/obj/item/rogueweapon/whip/witcher_chain/bronze)
