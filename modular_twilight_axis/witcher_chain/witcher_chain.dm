@@ -57,7 +57,7 @@
     force = 25
     sharpness = IS_SHARP
     wlength = WLENGTH_GREAT
-    w_class = WEIGHT_CLASS_NORMAL
+    w_class = WEIGHT_CLASS_SMALL
     slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT
     associated_skill = /datum/skill/combat/whipsflails
     sewrepair = FALSE
@@ -311,8 +311,8 @@
     stamcost = 18
     range = 5
 
-    var/hook_damage = 0
-    var/final_damage = 0
+    var/hook_damage = 5
+    var/final_damage = 5
     var/flight_delay = 1
     var/reel_delay = 1
     var/max_range = 5
@@ -338,8 +338,8 @@
 
     saved_alpha = 255
     saved_invisibility = 0
-    hook_damage = 0
-    final_damage = 0
+    hook_damage = 5
+    final_damage = 5
     . = ..()
 
 /datum/special_intent/witcher_chain_hook/process_attack()
