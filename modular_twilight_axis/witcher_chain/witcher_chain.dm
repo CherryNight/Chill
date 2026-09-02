@@ -25,7 +25,7 @@
     hitsound = 'sound/combat/hits/blunt/flailhit.ogg'
     chargetime = 0
     recovery = 9
-    damfactor = 1.15
+    damfactor = 1.25
     penfactor = PEN_MEDIUM
     reach = 2
     icon_state = "instab"
@@ -35,15 +35,15 @@
 
 /datum/intent/flail/smash/witcher
     name = "swinging slash"
-    desc = ""
+    desc = "Wind up the chain to deliver a brutal horizontal sweep, tearing open flesh and punching through heavy armor on impact."
     blade_class = BCLASS_CUT
     attack_verb = list("lashes", "whips", "strikes")
     hitsound = 'sound/combat/hits/blunt/flailhit.ogg'
     chargetime = 1 SECONDS
     clickcd = CLICK_CD_HEAVY
     chargedrain = 2
-    damfactor = 1.25
-    penfactor = PEN_HEAVY
+    damfactor = 1.45
+    penfactor = PEN_MEDIUM
     icon_state = "incut"
     item_d_type = "slash"
 
