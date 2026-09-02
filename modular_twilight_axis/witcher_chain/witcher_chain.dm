@@ -307,12 +307,12 @@
     use_clickloc = TRUE
     respect_adjacency = FALSE
     respect_dir = FALSE
-    cooldown = 18 SECONDS
+    cooldown = 20 SECONDS
     stamcost = 18
     range = 5
 
-    var/hook_damage = 5
-    var/final_damage = 5
+    var/hook_damage = 0
+    var/final_damage = 0
     var/flight_delay = 1
     var/reel_delay = 1
     var/max_range = 5
