@@ -41,7 +41,7 @@
     hitsound = 'sound/combat/hits/blunt/flailhit.ogg'
     chargetime = 1 SECONDS
     clickcd = CLICK_CD_HEAVY
-    chargedrain = 2
+    chargedrain = 1.3
     damfactor = 1.45
     penfactor = PEN_MEDIUM
     icon_state = "incut"
@@ -66,7 +66,7 @@
     max_blade_int = 300
     max_integrity = 300
     throwforce = 12
-    wdefense = 5
+    wdefense = 6
     minstr = 8
     anvilrepair = /datum/skill/craft/weaponsmithing
     smeltresult = /obj/item/ingot/steel
@@ -99,7 +99,7 @@
     max_blade_int = 250
     max_integrity = 250
     throwforce = 12
-    wdefense = 5
+    wdefense = 6
     is_silver = TRUE
     minstr = 8
     anvilrepair = /datum/skill/craft/weaponsmithing
