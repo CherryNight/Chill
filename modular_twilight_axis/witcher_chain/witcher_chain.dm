@@ -144,6 +144,36 @@
     grid_height = 64
     transform_type = /obj/item/clothing/wrists/roguetown/bracers/witcher/bronze
 
+/*
+// ---  Цепь граггара пока коммент ---
+
+/obj/item/rogueweapon/whip/witcher_chain/graggar
+    name = "graggar battle chain"
+    desc = "A monstrously heavy chain, tipped with an oversized hook capable of punching clean through."
+    icon_state = "graggarbattlechain"
+    icon = 'modular_twilight_axis/icons/roguetown/weapons/32.dmi'
+    force = 30
+    sharpness = IS_SHARP
+    wlength = WLENGTH_GREAT
+    w_class = WEIGHT_CLASS_NORMAL
+    slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT
+    associated_skill = /datum/skill/combat/whipsflails
+    sewrepair = FALSE
+    parrysound = list('sound/combat/parry/parrygen.ogg')
+    swingsound = CHAINWHOOSH
+    max_blade_int = 300
+    max_integrity = 300
+    throwforce = 14
+    wdefense = 6
+    minstr = 8
+    anvilrepair = /datum/skill/craft/weaponsmithing
+    smeltresult = /obj/item/ingot/steel
+    grid_width = 32
+    grid_height = 64
+    transform_type = /obj/item/clothing/wrists/roguetown/bracers/witcher/graggar
+    special = /datum/special_intent/witcher_chain_hook/graggar
+*/
+
 /obj/item/rogueweapon/whip/witcher_chain/attack(mob/living/target, mob/living/user)
     if(is_being_thrown_by_special)
         return FALSE
@@ -213,6 +243,22 @@
     max_integrity = 200
     transform_type = /obj/item/rogueweapon/whip/witcher_chain/bronze
 
+/*
+/obj/item/clothing/wrists/roguetown/bracers/witcher/graggar
+    name = "graggar battle chain bracers"
+    desc = "A pair of monstrous chain bracers sized for graggar-kind, protecting the arms from blows-most-foul."
+    body_parts_covered = ARMS
+    icon = 'modular_twilight_axis/icons/roguetown/clothing/wrists.dmi'
+    mob_overlay_icon = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    sleeved = 'modular_twilight_axis/icons/roguetown/clothing/onmob/wrists.dmi'
+    icon_state = "graggarchainarm"
+    item_state = "graggarchainarm"
+    armor = ARMOR_PLATE
+    anvilrepair = /datum/skill/craft/weaponsmithing
+    smeltresult = /obj/item/ingot/steel
+    transform_type = /obj/item/rogueweapon/whip/witcher_chain/graggar
+*/
+
 /obj/item/clothing/wrists/roguetown/bracers/witcher/ComponentInitialize()
     AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
 
@@ -265,6 +311,7 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/whip/witcher_chain/bronze
 	display_category = ITEM_CAT_WEAPONS_FLAILS
+
 //SPECIAL
 
 // --- Визуальные эффекты полета и натяжения ---
@@ -317,6 +364,7 @@
     var/reel_delay = 1
     var/max_range = 5
     var/active_cast = FALSE
+    var/hook_penetration = PEN_LIGHT
 
     var/mob/living/hooked_target
     var/obj/effect/witcher_chain_flight/flight_fx
@@ -503,7 +551,7 @@
 
     message_admins("hook target's path: [hooked_target.type]")
     if(!istype(hooked_target,/mob/living/simple_animal))
-        var/armor_block = hooked_target.run_armor_check(BODY_ZONE_CHEST, "stab", blade_dulling = BCLASS_PICK, armor_penetration = PEN_LIGHT, damage = hook_damage, used_weapon = iparent)
+        var/armor_block = hooked_target.run_armor_check(BODY_ZONE_CHEST, "stab", blade_dulling = BCLASS_PICK, armor_penetration = hook_penetration, damage = hook_damage, used_weapon = iparent)
         if(!(hooked_target.apply_damage(25, BRUTE, BODY_ZONE_CHEST, armor_block)))
             hooked_target.visible_message(span_warning("The tip bounces off [hooked_target]'s armor, unable to hook!"))
             begin_return()
@@ -643,3 +691,10 @@
     active_cast = FALSE
     original_slot = null
     throw_target = null
+
+/*
+/datum/special_intent/witcher_chain_hook/graggar
+    name = "Chain Ensnare"
+    desc = "Hurl the weighted hook of the chain toward a target. The hook pierces armor, wraps around the victim, and forcefully drags them into melee range for a finishing blow."
+    hook_penetration = PEN_MEDIUM
+*/
