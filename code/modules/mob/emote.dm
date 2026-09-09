@@ -56,10 +56,8 @@
 				return
 
 	// autopunctuation
-	// TA EDIT START
-	if((act == "me" || act == "subtle") && !client?.prefs?.no_autopunctuate)
-		param = autopunct_bare(param)
-	// TA EDIT END
+	if((act == "me" || act == "subtle") && !client?.prefs?.no_autopunctuate) // TA EDIT
+		param = autopunct_bare(param) // TA EDIT
 
 	var/list/key_emotes = GLOB.emote_list[act]
 	var/mute_time = 0
