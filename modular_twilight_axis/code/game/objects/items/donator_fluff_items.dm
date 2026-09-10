@@ -746,3 +746,6 @@
 	icon = 'modular_twilight_axis/firearms/icons/teppo.dmi'
 	icon_state = "barker"
 	item_state = "barker"
+
+/obj/item/clothing/head/roguetown/wizhat/bighat
+	name = "wizard's big hat"
