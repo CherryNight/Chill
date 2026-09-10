@@ -4304,6 +4304,7 @@
 #include "modular_twilight_axis\modular\Neu_food\code\cookware\cup.dm"
 #include "modular_twilight_axis\code\datums\flaws\gefheretic.dm"
 #include "modular_twilight_axis\code\modules\antagonists\roguetown\villain\minor_antags\assassin_spells.dm"
+#include "modular_twilight_axis\witcher_chain\witcher_chain.dm"
 #include "modular_deserttown\camel.dm"
 #include "modular_deserttown\desertareas.dm"
 #include "modular_deserttown\desertclothing.dm"
@@ -4352,5 +4353,4 @@
 #include "modular_deserttown\jobs\bandits_replace\lost_grenzel-advclasses\lost_imperial_knight.dm"
 #include "modular_deserttown\desert_bandit_test.dm"
 #include "modular_deserttown\deadbodies.dm"
-#include "modular_twilight_axis\witcher_chain\witcher_chain.dm"
 // END_INCLUDE
