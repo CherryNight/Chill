@@ -4944,14 +4944,14 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	triumph_cost = 12
 
 /datum/loadout_item/donator_crowcane_blade
-	name = "Donator Kit - Crow Cane Blade - Required: Rapier or Sabre"
+	name = "Donator Kit - Crow Cane Blade - Required: Decorated Rapier or Decorated Sabre"
 	category = list("Оружие", "Донат")
 	path = /obj/item/enchantingkit/crowcane_blade
 	donatitem = TRUE
 	donat_tier = 2
 
 /datum/loadout_item/donator_crowcane_scabbard
-	name = "Donator Kit - Crow Cane Scabbard - Required: Simple Scabbard"
+	name = "Donator Kit - Crow Cane Scabbard - Required: Decorated Scabbard, Golden"
 	category = list("Оружие", "Донат")
 	path = /obj/item/enchantingkit/crowcane_scabbard
 	donatitem = TRUE
