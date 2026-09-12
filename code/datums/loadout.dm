@@ -4962,14 +4962,12 @@ GLOBAL_LIST_EMPTY(loadout_items_by_category)
 	category = list("Оружие", "Донат")
 	path = /obj/item/enchantingkit/jezail
 	donatitem = TRUE
-	donat_tier = 2
 
 /datum/loadout_item/donator_teppo
 	name = "Donator Kit - Teppo - Required: Arquebus, Hakenbüchse, or Barker"
 	category = list("Оружие", "Донат")
 	path = /obj/item/enchantingkit/teppo
 	donatitem = TRUE
-	donat_tier = 2
 
 /datum/loadout_item/triumph_thinwinterdress
 	name = "Thin Winter Dress"
